@@ -9,7 +9,8 @@
 │ └── README.md # 組織プロフィールページ用のREADME（https://github.com/wellstone-inc に表示されます）
 ├── ISSUE_TEMPLATE/ # 組織全体で共通のIssueテンプレート（オプション）
 ├── PULL_REQUEST_TEMPLATE.md # 共通のPull Requestテンプレート（オプション）
-└── workflows/ # 共通のGitHub Actions ワークフロー（オプション）```
+└── workflows/ # 共通のGitHub Actions ワークフロー（オプション）
+```
 
 ## 📌 このリポジトリの目的
 
