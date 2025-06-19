@@ -1,0 +1,34 @@
+# trueにすると、テンプレートを使わない空のIssue作成を許可します。
+# falseにすると、ユーザーは必ずいずれかのテンプレートを選ぶ必要があります。
+blank_issues_enabled: false
+
+# Issueテンプレート以外の連絡先（ドキュメントやDiscussionsなど）へのリンクを表示します。
+# contact_links:
+#  - name: 💬 GitHub Discussions
+#    # ご自身のプロジェクトのURLに書き換えてください
+#    url: https://github.com/wellstone-inc/YOUR-REPOSITORY/discussions
+#    about: 機能要望や実装に関する議論・相談はこちらでお願いします。
+
+
+# ここから下が、Issueテンプレートの選択肢を定義する部分です。
+# 先ほど作成した .md ファイルと連携させます。
+- name: "🐞 バグ報告 (Bug Report)"
+  description: "製品やサービスのバグ・不具合に関する報告はこちら"
+  # このtemplateの値が、実際のMarkdownファイル名を指します。
+  template: bug_report.md
+  # このテンプレートが選ばれた時に自動で付与されるラベルを指定できます。
+  labels:
+    - "bug"
+    - "triage" # トリアージ（内容確認）が必要なことを示すラベル
+
+- name: "✨ 機能要望 (Feature Request)"
+  description: "新しい機能の追加や、既存機能の改善に関する提案はこちら"
+  template: feature_request.md
+  labels:
+    - "enhancement"
+
+- name: "❓ 質問 (Question)"
+  description: "仕様や使い方など、プロジェクトに関する質問はこちら"
+  template: question.md
+  labels:
+    - "question"
