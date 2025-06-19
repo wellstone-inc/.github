@@ -1,30 +1,64 @@
-# trueにすると、テンプレートを使わない空のIssue作成を許可します。
-# falseにすると、ユーザーは必ずいずれかのテンプレートを選ぶ必要があります。
-blank_issues_enabled: false
-
-# Issueテンプレート以外の連絡先（ドキュメントやDiscussionsなど）へのリンクを表示します。
-# contact_links:
-#  - name: 💬 GitHub Discussions
-#    # ご自身のプロジェクトのURLに書き換えてください
-#    url: https://github.com/wellstone-inc/YOUR-REPOSITORY/discussions
-#    about: 機能要望や実装に関する議論・相談はこちらでお願いします。
-
-
-- name: "🐞 バグ報告 (Bug Report)"
-  description: "製品やサービスのバグ・不具合に関する報告はこちら"
-  template: bug_report.md
-  labels:
-    - "bug"
-    - "triage" # トリアージ（内容確認）が必要なことを示すラベル
-
-- name: "✨ 機能要望 (Feature Request)"
-  description: "新しい機能の追加や、既存機能の改善に関する提案はこちら"
-  template: feature_request.md
-  labels:
-    - "enhancement"
-
-- name: "❓ 質問 (Question)"
-  description: "仕様や使い方など、プロジェクトに関する質問はこちら"
-  template: question.md
-  labels:
-    - "question"
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: contact
+    attributes:
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
+      required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
