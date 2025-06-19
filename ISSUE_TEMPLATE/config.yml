@@ -10,13 +10,9 @@ blank_issues_enabled: false
 #    about: 機能要望や実装に関する議論・相談はこちらでお願いします。
 
 
-# ここから下が、Issueテンプレートの選択肢を定義する部分です。
-# 先ほど作成した .md ファイルと連携させます。
 - name: "🐞 バグ報告 (Bug Report)"
   description: "製品やサービスのバグ・不具合に関する報告はこちら"
-  # このtemplateの値が、実際のMarkdownファイル名を指します。
   template: bug_report.md
-  # このテンプレートが選ばれた時に自動で付与されるラベルを指定できます。
   labels:
     - "bug"
     - "triage" # トリアージ（内容確認）が必要なことを示すラベル
