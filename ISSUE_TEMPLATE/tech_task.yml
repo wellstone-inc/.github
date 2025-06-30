@@ -1,0 +1,38 @@
+name: 🔧 技術タスク・調査
+description: 技術調査やリファクタ、ドキュメント作成などの内部タスク用です。
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔧 技術タスク・調査
+
+  - type: textarea
+    id: task_description
+    attributes:
+      label: タスク内容
+      description: どんな作業なのか、具体的に記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: ゴール・終了条件
+      description: このタスクが完了したと判断する基準を明記してください。
+
+  - type: checkboxes
+    id: task_steps
+    attributes:
+      label: 想定作業ステップ
+      description: 必要であれば以下にステップを記載してください。
+      options:
+        - label: ステップ1
+        - label: ステップ2
+        - label: ステップ3
+
+  - type: textarea
+    id: related
+    attributes:
+      label: 関連Issue・ドキュメント
+      description: このタスクに関連するIssueやドキュメントがあれば記載してください。
