@@ -2,7 +2,7 @@ blank_issues_enabled: false
 
 contact_links:
   - name: 質問・一般的な相談はこちらへ
-    url: https://github.com/your-org/your-repo/discussions
+    url: https://github.com/wellstone-inc/your-repo/discussions
     about: コードやバグに直接関係しない質問はDiscussionsでお願いします。
 
 issue_templates:
