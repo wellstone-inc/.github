@@ -1,0 +1,42 @@
+name: 🚀 機能追加要望
+description: 新機能の追加や既存機能の改善を提案します。
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 機能追加・改善のリクエスト
+
+  - type: textarea
+    id: feature_summary
+    attributes:
+      label: 概要
+      description: どんな機能を追加したいのか、簡潔に記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景・課題
+      description: なぜこの機能が必要か、現状の課題を記載してください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 提案する解決策
+      description: 理想的な解決方法や実装アイデアがあれば記載してください。
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 代替案
+      description: 他に考えたアプローチがあれば記載してください。
+
+  - type: textarea
+    id: related
+    attributes:
+      label: 関連Issue・資料
+      description: 関連するIssue番号や参考URLなどがあれば記載してください。
